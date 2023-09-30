@@ -1,0 +1,60 @@
+<body>
+  <div class="sideNav">
+    <div class="container">
+      <div class="sideLogos">
+        <a
+          routerLink="/home/dashboard"
+          class="sideButtons"
+          routerLinkActive="active"
+          class="sideButtons"
+          ><i class="fa fa-dashboard"></i></a
+        ><br /><br />
+        <a
+          routerLink="/home/inventory"
+          class="sideButtons"
+          routerLinkActive="active"
+          class="sideButtons"
+          ><i class="fa fa-cubes"></i></a
+        ><br /><br />
+        <a
+          routerLink="/home/reservations"
+          class="sideButtons"
+          routerLinkActive="active"
+          class="sideButtons"
+          ><i class="fa fa-calendar-o"></i></a
+        ><br /><br />
+        <a
+          routerLink="/home/history"
+          class="sideButtons"
+          routerLinkActive="active"
+          class="sideButtons"
+          ><i class="fa fa-history"></i></a
+        ><br /><br />
+        <a
+          routerLink="/home/archive"
+          class="sideButtons"
+          routerLinkActive="active"
+          class="sideButtons"
+          ><i class="fa fa-archive"></i> </a
+        ><br /><br />
+        <a
+          routerLink="/home/settings"
+          class="sideButtons"
+          routerLinkActive="active"
+          class="sideButtons"
+          ><i class="fa fa-gears"></i
+        ></a>
+      </div>
+    </div>
+
+    <br /><br />
+    <div class="sideFooter">
+      <button class="signOut" routerLink="/login">
+        <i class="fa fa-sign-out"></i>
+      </button>
+    </div>
+  </div>
+  <div class="router">
+    <router-outlet></router-outlet>
+  </div>
+</body>

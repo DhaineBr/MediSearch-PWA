@@ -5,16 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { SignupComponent } from './page/signup/signup.component';
-import { HomeComponent } from './MainNavigation/home/home.component';
-import { ReservationComponent } from './MainNavigation/reservation/reservation.component';
+import { MainNavigationModule } from './MainNavigation/main-navigation.module';
+import { LoginComponent } from './page/login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    HomeComponent,
-    ReservationComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +23,8 @@ import { ReservationComponent } from './MainNavigation/reservation/reservation.c
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    MainNavigationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
