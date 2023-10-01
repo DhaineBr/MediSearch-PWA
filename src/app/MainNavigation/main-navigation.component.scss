@@ -18,15 +18,32 @@ body, html {
   position: absolute;
   bottom: 0; /* Stick to the bottom */
   width: 100%; /* Occupy full width of the container */
-  height: 10%; /* Set the height to 15% of the container */
+  height: 12.5%; /* Set the height to 15% of the container */
   border-style: solid; 
   align-self: flex-end;
   text-align: center;
+  justify-content: center;
+  border-style: solid hidden hidden hidden;
+  border-width: 0.5vw;
+  border-color: #ddf0eb;
+  border-radius: 1rem;
+  align-items: center;
+  padding-top: 7.5%;
 }
 
-i {
-  font-size: 12.5vw;
-  margin: auto;
-  padding: 0 5%;
+a {
+  font-size: 10vw;
+  margin: auto 4.25%; 
+  padding: 1% 2.5%;
   color: #50b299;
+  border-style: hidden;
+  border-radius: 1rem;
+  transition: background-color 0.5s ease;
+  transition: opacity 0.5s ease;
+  opacity: 0.75;
+}
+
+a.active {
+  background-color: #ddf0eb;
+  opacity: 1
 }
