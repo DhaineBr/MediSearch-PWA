@@ -4,3 +4,26 @@
     font-family: Idealist Sans;
 }
 html, body { height: 100%; }
+
+::-webkit-scrollbar {
+    width: 5px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  .scrollbar {
+    scrollbar-width: thin; 
+    scrollbar-color: transparent transparent; 
+  }
+  
+  .scrollbar:hover {
+    scrollbar-width: thin; 
+    scrollbar-color: transparent transparent; 
+  }
+  

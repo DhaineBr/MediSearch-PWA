@@ -12,6 +12,7 @@ body, html {
   flex-direction: column;
   height: 99%;
   position: relative;
+  z-index: 998;
 }
 
 .bottom-nav {
@@ -26,9 +27,10 @@ body, html {
   border-style: solid hidden hidden hidden;
   border-width: 0.5vw;
   border-color: #ddf0eb;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
   align-items: center;
   padding-top: 7.5%;
+  background-color: white;
 }
 
 a {
