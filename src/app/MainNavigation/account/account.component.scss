@@ -1,5 +1,5 @@
 .container  {
-    height: 82.5vh;
+    height: 85vh;
     z-index: 999;
     border-style: hidden;
     overflow-y: scroll;
@@ -23,6 +23,7 @@ div {
     border-radius: 1rem;
     border-style: hidden;
     background-color: #ddf0eb;
+    box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
 }
 
 .signout   {
@@ -37,6 +38,7 @@ div {
     background-color: #ffecf3;
     border-radius: 1rem;
     border-style: hidden;
+    box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
 }
 
 .middle-container   {
@@ -82,5 +84,6 @@ a.account-header   {
     border-style: hidden;
     background-color: #eeeeee;
     width: 100%;
-    margin: auto
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
 }
