@@ -1,7 +1,59 @@
 .container  {
-    height: 80vh;
-    z-index: 999;
-    border-style: solid;
+    height: 82.75vh;
+    z-index: 901;
     overflow-y: scroll;
     padding: 5% 0 0 0;
+}
+
+*   {
+    border-style: hidden;
+}
+
+.searchbar  {
+    text-align: center;
+    margin: 1% auto;
+    width: 90%;
+    border-radius: 0.75rem;
+    color: #55665e;
+    box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.3rem -0.1rem, rgba(0, 0, 0, 0.06) 0rem 0.1rem 0.2rem -0.1rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 998;
+}
+
+input[type="text"]  {
+    font-size: 5vw;
+    padding: 2%;
+    width: 85%;
+    outline: none;
+    background-color: transparent;
+    color: #55665e;
+}
+
+i   {
+    font-size: 5vw;
+    background-color: transparent;
+    opacity: 0.75;
+}
+
+.content    {
+    width: 90%;
+    margin: 10% auto;
+    height: 30%;
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+
+
+
+
+
+::placeholder   {
+    font-weight: 100;
 }

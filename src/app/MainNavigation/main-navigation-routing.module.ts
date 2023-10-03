@@ -4,7 +4,7 @@ import { MainNavigationComponent } from './main-navigation.component';
 import { HomeComponent } from './home/home.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { AccountComponent } from './account/account.component';
-import { SearchComponent } from './search/search.component';
+
 
 
 const routes: Routes = [
@@ -12,7 +12,6 @@ const routes: Routes = [
     component: MainNavigationComponent, 
   children:  [
     {path: 'landing', component: HomeComponent},
-    {path: 'search', component: SearchComponent},
     {path: 'reservation', component: ReservationComponent},
     {path: 'account', component: AccountComponent},
   ]},

@@ -6,7 +6,6 @@ import { MainNavigationComponent } from './main-navigation.component';
 
 import { FormsModule } from '@angular/forms';
 import { AccountComponent } from './account/account.component';
-import { SearchComponent } from './search/search.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { HomeComponent } from './home/home.component';
 
@@ -14,7 +13,6 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     MainNavigationComponent,
     AccountComponent,
-    SearchComponent,
     HomeComponent,
     ReservationComponent
   ],
