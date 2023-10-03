@@ -1,5 +1,5 @@
 div {
-  border-style: solid;
+  border-style: hidden;
 }
 
 body, html {
@@ -16,7 +16,7 @@ body, html {
 }
 
 .bottom-nav {
-  position: absolute;
+  position: fixed;
   bottom: 0; /* Stick to the bottom */
   width: 100%; /* Occupy full width of the container */
   height: 12.5%; /* Set the height to 15% of the container */
@@ -31,6 +31,7 @@ body, html {
   align-items: center;
   padding-top: 7.5%;
   background-color: white;
+  display: block;
 }
 
 a {
@@ -49,3 +50,4 @@ a.active {
   background-color: #ddf0eb;
   opacity: 1
 }
+
