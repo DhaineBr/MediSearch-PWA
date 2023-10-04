@@ -10,7 +10,9 @@
 }
 
 .reserved-meds {
-    height: 15%;
+    min-height: 15%;
+    max-height: 20%;
+    overflow: auto;
     width: 82.5%;
     border-style: hidden;
     border-radius: 0.5rem;
@@ -25,7 +27,7 @@
     border-style: hidden;
     width: 95%;
     font-size: 7.5vw;
-    padding: 2.5% 0 0 5%;
+    padding: 5% 0 0 5%;
     font-weight: 600;
     color: #55665e;
     position: sticky;
@@ -46,4 +48,8 @@ label, .time-to-live   {
 
 .store-details  {
     font-size: 3.75vw;
+}
+
+h3  {
+    font-size: 5vw;
 }
