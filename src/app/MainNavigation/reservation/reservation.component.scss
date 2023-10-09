@@ -1,22 +1,26 @@
 .container  {
-    height: 82.75vh;
-    z-index: 901;
-    border-style: hidden;
-    overflow-y: scroll;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  height: 92.5vh;
+  z-index: 901;
+  overflow-y: hidden;
+  padding: 0 0 0 0;
 }
+
+.mid-container  {
+  width: 100%;
+  height: 80vh;
+  overflow-y: scroll;
+  margin: 0 0 0 0;
+  padding: 0 0 15% 0;
+}
+
 
 .reserved-meds {
     min-height: 15%;
     max-height: 20%;
     overflow: auto;
     width: 82.5%;
-    border-style: hidden;
     border-radius: 0.5rem;
-    margin: 2.5% auto 0 auto;
+    margin: 5% auto 0 auto;
     padding: 2.5%;
     color: #55665e;
     background-color: #ddf0eb;
@@ -24,10 +28,9 @@
 }
 
 .header {
-    border-style: hidden;
     width: 95%;
     font-size: 7.5vw;
-    padding: 5% 0 0 5%;
+    padding: 2.5% 0 0 5%;
     font-weight: 600;
     color: #55665e;
     position: sticky;
@@ -52,4 +55,8 @@ label, .time-to-live   {
 
 h3  {
     font-size: 5vw;
+}
+
+*   {
+  border-style: hidden;
 }

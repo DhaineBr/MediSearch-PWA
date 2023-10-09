@@ -1,5 +1,5 @@
 .container  {
-    height: 82.75vh;
+    height: 92.5vh;
     z-index: 901;
     overflow-y: hidden;
     padding: 5% 0 0 0;
@@ -44,111 +44,6 @@ i   {
     margin: 10% 0 0 0;
     color: #55665e;
 }
-
-.left {
-    width: 42.5%;
-    height: 17.5vh;
-    float: left;
-    margin: 0 0 0 5%;
-    
-}
-
-.right {
-    width: 42.5%;
-    height: 17.5vh;
-    float: right;
-    margin: 0 5% 0 0;
-}
-
-.highest-rated, .nearest-store  {
-    margin: 5% 0 0 0;
-    border-radius: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.4rem -0.05rem, rgba(0, 0, 0, 0.06) 0rem 0.1rem 0.4rem -0.05rem;
-    min-height: 11.75vh; /* Set a minimum height */
-    max-height: 15vh; /* Set a maximum height if needed */
-    overflow-y: auto; /* Add vertical scrollbar when needed */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.store    {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 2.5%;
-    min-height: 30%; /* Set a minimum height */
-    max-height: 40%; /* Set a maximum height if needed */
-    overflow-y: auto; /* Add vertical scrollbar when needed */
-    border-radius: 0.75rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.4rem -0.05rem, rgba(0, 0, 0, 0.06) 0rem 0.1rem 0.4rem -0.05rem;
-    background-color: #e4f8ef;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.store-detail-container {
-    width: 90%;
-    height: 90%;
-}
-
-
-
-.mid-container  {
-    width: 100%;
-    height: 50vh;
-    overflow-y: scroll;
-    margin: 2.5% 0 0 0;
-    border-style: solid hidden solid hidden;
-    border-width: 0.05rem;
-    padding: 0 0 15% 0;
-}
-
-legend    {
-    margin: 0 0 5% 5%;
-    font-size: 5vw;
-    color: #55665e;
-    font-weight: 600;
-}
-
-.store-details, h3  {
-    color: #55665e;
-}
-
-h3  {
-    font-size: 5vw;
-}
-
-.store-details  {
-    font-size: 3.75vw;
-}
-
-.rating {
-    opacity: 0.5;
-    font-weight: 200;
-    font-size: 3.75vw;
-}
-
-#star-icon  {
-    color: rgb(255, 183, 0);
-    font-size: 3.75vw;
-}
-
-#pin {
-    color: #AA0441;
-}
-
-#star   {
-    color: rgb(255, 183, 0);
-}
-
-.details    {
-    font-size: 3.75vw;
-}
-
 
 ::placeholder   {
     font-weight: 100;
