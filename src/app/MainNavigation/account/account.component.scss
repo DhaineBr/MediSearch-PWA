@@ -1,12 +1,14 @@
 .container  {
-    height: 82.75vh;
+    height: 87.5vh;
     z-index: 901;
-    border-style: hidden;
     overflow-y: scroll;
     padding: 5% 0 0 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-div {
+* {
     border-style: hidden;
 }
 
@@ -21,7 +23,7 @@ div {
     display: flex;
     text-align: center;
     border-radius: 1rem;
-    border-style: hidden;
+
     background-color: #ddf0eb;
     box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
 }
@@ -30,15 +32,17 @@ div {
     color: #AA0441;
     height: 6.25vh;
     width: 90%;
-    margin: 5% auto 0 auto;
     display: flex;
     font-size: 6.25vw;
     justify-content: center;
     align-items: center;
     background-color: #ffecf3;
     border-radius: 1rem;
-    border-style: hidden;
+
     box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
+
+    display: flex;
+    margin: 32.5vh auto 0 auto;
 }
 
 .middle-container   {
@@ -81,9 +85,28 @@ a.account-header   {
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
-    border-style: hidden;
-    background-color: #eeeeee;
+
+    background-color: white;
     width: 100%;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
+    position: relative; /* Added position relative to enable positioning of the ripple element */
+    overflow: hidden; /* Added to hide overflow from ripple element */
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: ripple-animation 0.6s linear;
+      background-color: rgba(0, 0, 0, 0.4); /* Adjust the color and transparency */
 }
+
+    &:active::after {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+

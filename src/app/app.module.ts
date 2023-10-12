@@ -7,6 +7,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { SignupComponent } from './page/signup/signup.component';
 import { MainNavigationModule } from './MainNavigation/main-navigation.module';
 import { LoginComponent } from './page/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LoginComponent } from './page/login/login.component';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    MainNavigationModule
+    MainNavigationModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

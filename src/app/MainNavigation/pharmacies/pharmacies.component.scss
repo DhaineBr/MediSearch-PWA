@@ -46,23 +46,22 @@
 }
 
 
-button  {
+button {
   font-size: 5vw;
   border-style: solid;
   border-color: #55665e;
   padding: 2.5%;
   margin: auto;
   opacity: 0.75;
-
   color: #55665e;
   border-radius: 0.5rem;
   background-color: transparent;
-}
 
-button:active {
-  background-color: #55665e;
-  color: white;
-  opacity: 1;
+  &.active {
+    background-color: #55665e;
+    color: white;
+    opacity: 1;
+  }
 }
 
 
