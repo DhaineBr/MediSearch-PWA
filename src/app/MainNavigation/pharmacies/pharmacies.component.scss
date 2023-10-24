@@ -78,7 +78,7 @@ button {
   margin: auto;
   margin-bottom: 5%;
   min-height: 20%; /* Set a minimum height */
-  max-height: 25%; /* Set a maximum height if needed */
+  max-height: 27.5%; /* Set a maximum height if needed */
   overflow-y: auto; /* Add vertical scrollbar when needed */
   border-radius: 0.75rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.4rem -0.05rem, rgba(0, 0, 0, 0.06) 0rem 0.1rem 0.4rem -0.05rem;
@@ -92,14 +92,16 @@ button {
 .store-detail-container {
   width: 90%;
   height: 90%;
+  padding: 2.5% 0 2.5% 0;
 }
 
-.store-details, h3  {
+.store-details, .store-name  {
   color: #55665e;
 }
 
-h3  {
-  font-size: 5vw;
+.store-name  {
+  font-size: 4.5vw;
+  padding: 5% 0 5% 0;
 }
 
 

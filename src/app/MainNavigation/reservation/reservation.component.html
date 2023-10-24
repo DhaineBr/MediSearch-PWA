@@ -1,93 +1,17 @@
 <div class="container">
     <div class="header">Reserved</div>
     <div class="mid-container">
-      <div class="reserved-meds" routerLink="/home/landing">
-          <h3>Order Name</h3>
-          <span class="store-details">Store Name <br/>
-          Store Address <br/></span>
-          <label for="time-to-live">Valid Until:</label>
-          <span class="time-to-live"> Sept. 30, 2024 | 08:00 PM</span>
-      </div>
+      <ng-container *ngFor="let reservation of reservations">
+        <div class="reserved-meds" routerLink="/home/landing">
+            <h3>{{reservation.orderID}}</h3>
+            <span class="store-details">{{reservation.storeName}}<br/>
+              {{reservation.storeAddress}} <br/></span>
+            <label for="time-to-live">Valid Until:</label>
+            <span class="time-to-live"> {{reservation.validityPeriod}}</span>
+        </div>
+      </ng-container>
 
-      <div class="reserved-meds" routerLink="/home/landing">
-        <h3>Order Name</h3>
-        <span class="store-details">Store Name <br/>
-        Store Address <br/></span>
-        <label for="time-to-live">Valid Until:</label>
-        <span class="time-to-live"> Sept. 30, 2024 | 08:00 PM</span>
+
     </div>
-
-    <div class="reserved-meds" routerLink="/home/landing">
-      <h3>Order Name</h3>
-      <span class="store-details">Store Name <br/>
-      Store Address <br/></span>
-      <label for="time-to-live">Valid Until:</label>
-      <span class="time-to-live"> Sept. 30, 2024 | 08:00 PM</span>
-  </div>
-
-  <div class="reserved-meds" routerLink="/home/landing">
-    <h3>Order Name</h3>
-    <span class="store-details">Store Name <br/>
-    Store Address <br/></span>
-    <label for="time-to-live">Valid Until:</label>
-    <span class="time-to-live"> Sept. 30, 2024 | 08:00 PM</span>
-  </div>
-
-  <div class="reserved-meds" routerLink="/home/landing">
-    <h3>Order Name</h3>
-    <span class="store-details">Store Name <br/>
-    Store Address <br/></span>
-    <label for="time-to-live">Valid Until:</label>
-    <span class="time-to-live"> Sept. 30, 2024 | 08:00 PM</span>
-  </div>
-
-  <div class="reserved-meds" routerLink="/home/landing">
-    <h3>Order Name</h3>
-    <span class="store-details">Store Name <br/>
-    Store Address <br/></span>
-    <label for="time-to-live">Valid Until:</label>
-    <span class="time-to-live"> Sept. 30, 2024 | 08:00 PM</span>
-  </div>
-
-  <div class="reserved-meds" routerLink="/home/landing">
-    <h3>Order Name</h3>
-    <span class="store-details">Store Name <br/>
-    Store Address <br/></span>
-    <label for="time-to-live">Valid Until:</label>
-    <span class="time-to-live"> Sept. 30, 2024 | 08:00 PM</span>
-  </div>
-
-  <div class="reserved-meds" routerLink="/home/landing">
-    <h3>Order Name</h3>
-    <span class="store-details">Store Name <br/>
-    Store Address <br/></span>
-    <label for="time-to-live">Valid Until:</label>
-    <span class="time-to-live"> Sept. 30, 2024 | 08:00 PM</span>
-  </div>
-
-  <div class="reserved-meds" routerLink="/home/landing">
-    <h3>Order Name</h3>
-    <span class="store-details">Store Name <br/>
-    Store Address <br/></span>
-    <label for="time-to-live">Valid Until:</label>
-    <span class="time-to-live"> Sept. 30, 2024 | 08:00 PM</span>
-  </div>
-
-  <div class="reserved-meds" routerLink="/home/landing">
-    <h3>Order Name</h3>
-    <span class="store-details">Store Name <br/>
-    Store Address <br/></span>
-    <label for="time-to-live">Valid Until:</label>
-    <span class="time-to-live"> Sept. 30, 2024 | 08:00 PM</span>
-  </div>
-
-  <div class="reserved-meds" routerLink="/home/landing">
-    <h3>Order Name</h3>
-    <span class="store-details">Store Name <br/>
-    Store Address <br/></span>
-    <label for="time-to-live">Valid Until:</label>
-    <span class="time-to-live"> Sept. 30, 2024 | 08:00 PM</span>
-  </div>
-</div>
 
 </div>

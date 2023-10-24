@@ -10,59 +10,17 @@
     <button #button4 (click)="toggleButtonActive($event, button4)"><i class="fa-solid fa-arrow-down-z-a"></i></button>
   </div>
   <div class="mid-container">
+    <ng-container *ngFor="let store of stores">
     <div class="store">
         <div class="store-detail-container">
-            <h3>Store Name</h3>
-            <span class="store-details">Store Address <br>
-            Store Hours</span> <br>
-            <i class="fa-solid fa-star-half-stroke" id="star-icon"></i><span class="rating">&nbsp; 4.5</span>
+            <span class="store-name">{{store.storeName}}</span><br>
+            <span class="store-details">{{store.storeAddress}}<br>
+              {{store.storeHours}}</span> <br>
+            <i class="fa-solid fa-star-half-stroke" id="star-icon"></i><span class="rating">&nbsp; {{store.storeRating}}</span>
         </div>
     </div>
+    </ng-container>
 
-    <div class="store">
-      <div class="store-detail-container">
-          <h3>Store Name</h3>
-          <span class="store-details">Store Address <br>
-          Store Hours</span> <br>
-          <i class="fa-solid fa-star-half-stroke" id="star-icon"></i><span class="rating">&nbsp; 4.5</span>
-      </div>
-    </div>
-
-    <div class="store">
-      <div class="store-detail-container">
-          <h3>Store Name</h3>
-          <span class="store-details">Store Address <br>
-          Store Hours</span> <br>
-          <i class="fa-solid fa-star-half-stroke" id="star-icon"></i><span class="rating">&nbsp; 4.5</span>
-      </div>
-    </div>
-
-    <div class="store">
-      <div class="store-detail-container">
-          <h3>Store Name</h3>
-          <span class="store-details">Store Address <br>
-          Store Hours</span> <br>
-          <i class="fa-solid fa-star-half-stroke" id="star-icon"></i><span class="rating">&nbsp; 4.5</span>
-      </div>
-    </div>
-
-    <div class="store">
-      <div class="store-detail-container">
-          <h3>Store Name</h3>
-          <span class="store-details">Store Address <br>
-          Store Hours</span> <br>
-          <i class="fa-solid fa-star-half-stroke" id="star-icon"></i><span class="rating">&nbsp; 4.5</span>
-      </div>
-    </div>
-
-    <div class="store">
-      <div class="store-detail-container">
-          <h3>Store Name</h3>
-          <span class="store-details">Store Address <br>
-          Store Hours</span> <br>
-          <i class="fa-solid fa-star-half-stroke" id="star-icon"></i><span class="rating">&nbsp; 4.5</span>
-      </div>
-    </div>
   </div>
 
 
