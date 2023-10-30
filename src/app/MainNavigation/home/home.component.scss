@@ -2,24 +2,43 @@
     height: 92.5vh;
     z-index: 901;
     overflow-y: hidden;
-    padding: 5% 0 0 0;
+    padding: 1% 0 0 0;
+    width: 100%;
 }
 
 *   {
     border-style: hidden;
+    outline: none;
+}
+
+.top-nav {
+  width: 100%;
+  height: 10vh;
+  color: #55665e;
+  display: flex;
+  flex-direction: row;
+  padding: 3% 0 0 0;
+}
+
+.cart {
+  width: 10%;
+  margin: 0;
+  height: 6vh;
+  padding: 1.5% 3% 0 0;
 }
 
 .searchbar  {
     text-align: center;
     margin: 1% auto;
-    width: 90%;
+    width: 80%;
     border-radius: 0.75rem;
     color: #55665e;
-    box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.3rem -0.1rem, rgba(0, 0, 0, 0.06) 0rem 0.1rem 0.2rem -0.1rem;
+    box-shadow: #ddf0eb 0rem 0.2rem 0.3rem -0.15rem, #ddf0eb 0rem 0.1rem 0.2rem -0.1rem;
     position: sticky;
     top: 0;
     background-color: white;
     z-index: 998;
+    height: 6vh;
 }
 
 input[type="text"]  {
@@ -37,13 +56,160 @@ i   {
     opacity: 0.75;
 }
 
-
-.top-nav {
-    width: 100%;
-    height: 17.5vh;
-    margin: 10% 0 0 0;
-    color: #55665e;
+.cart-button {
+  float: right;
+  border-radius: 0.25rem;
+  background-color: white;
+  color: #50b299;
+  border-radius: 2rem;
+  padding: 25%;
+  box-shadow: #ddf0eb 0 0 0.5rem 0.2rem;
 }
+
+
+
+//Middle div
+.mid-container  {
+  height: 5vh;
+  position: relative;
+}
+
+h3  {
+  font-family: Idealist Sans;
+  padding: 0 0 0 2.5%;
+  color: #55665e;
+}
+
+.pharmacies {
+  display: flex;
+  overflow-x: auto;
+  padding: 0 0 0 2.5%;
+  height: 20vh;
+  justify-content:flex-start;
+  align-items: center;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.pharmacy-card  {
+  min-height: 60%;
+  max-height: 70%;
+  margin: 0 5% 0 0;
+  width: 50%;
+  border-radius: 0.25rem;
+  padding: 2.5%;
+  background-color: white;
+  box-shadow: rgba(17, 17, 26, 0.05) 0rem 0.0625rem 0rem, rgba(17, 17, 26, 0.1) 0rem 0rem 0.5rem;
+}
+
+.pharmacy-details  {
+  font-size: 2.75vw;
+}
+
+.rating {
+  opacity: 0.5;
+  font-weight: 200;
+  font-size: 2.75vw;
+}
+
+#star-icon  {
+  color: rgb(255, 183, 0);
+  font-size: 3.75vw;
+}
+
+.pharmacy-details, .pharmacy-name  {
+  color: #55665e;
+}
+
+.pharmacy-name  {
+  font-size: 3.5vw;
+}
+
+
+//bottom container div
+.bottom-container {
+  height: 55vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sort-nav {
+  width: 100%;
+  padding: 2%;
+  color: #55665e;
+  text-align: right;
+  height: 5vh;
+  position: sticky;
+  z-index: 99999;
+}
+
+.select-form  {
+  width: 35%;
+  float: right;
+  margin: 0 5% 0 0
+}
+
+select  {
+  border-radius: 0.25rem;
+  font-size: 3vw;
+  opacity: 0.5;
+  box-shadow: #50b299 0 0 0.25rem 0.02rem;
+}
+
+label {
+  font-size: 4vw;
+}
+
+option  {
+  font-size: 3vw;
+  outline: none;
+  border-radius: 1rem;
+  background-color: white;
+  color: #55665e;
+}
+
+.all-pharmacies {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 2.5% 0 10% 0
+}
+
+.store    {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 5%;
+  min-height: 25%; /* Set a minimum height */
+  max-height: 30%; /* Set a maximum height if needed */
+  overflow-y: hidden; /* Add vertical scrollbar when needed */
+  border-radius: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.4rem -0.05rem, rgba(0, 0, 0, 0.06) 0rem 0.1rem 0.4rem -0.05rem;
+  background-color: #e4f8ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5% 0 2.5% 0
+}
+
+.store-detail-container {
+  width: 90%;
+  height: 90%;
+  padding: 2.5% 0 2.5% 0;
+}
+
+.store-details, .store-name  {
+  color: #55665e;
+}
+
+.store-name  {
+  font-size: 4.5vw;
+  padding: 5% 0 5% 0;
+}
+
+
+
+
+
 
 ::placeholder   {
     font-weight: 100;
