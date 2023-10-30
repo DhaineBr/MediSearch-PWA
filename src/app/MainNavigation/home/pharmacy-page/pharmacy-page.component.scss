@@ -1,0 +1,161 @@
+.container  {
+  height: 92.5vh;
+  z-index: 901;
+  overflow-y: hidden;
+  padding: 1% 0 0 0;
+  width: 100%;
+  position: absolute;
+}
+
+*   {
+  border-style: hidden;
+  outline: none;
+}
+
+.header {
+  font-size: 3.5vw;
+  background-color: #50b299;
+  color: white;
+  padding: 2% 0 0 3%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  font-size: 200;
+}
+
+.back {
+  background-color: transparent;
+  color: white;
+  height: 3.5vh;
+  padding: 0 2% 0 0 ;
+  float: left;
+  font-size: 200;
+}
+
+.name  {
+  width: 40%;
+  float: left;
+  margin: 0;
+  font-size: 200;
+}
+
+.top-nav {
+width: 100%;
+height: 10vh;
+color: #55665e;
+display: flex;
+flex-direction: row;
+padding: 3% 0 0 0;
+}
+
+.cart {
+  width: 10%;
+  margin: 0;
+  height: 6vh;
+  padding: 1.5% 3% 0 0;
+}
+
+.searchbar  {
+    text-align: center;
+    margin: 1% auto;
+    width: 80%;
+    border-radius: 0.75rem;
+    color: #55665e;
+    box-shadow: #ddf0eb 0rem 0.2rem 0.3rem -0.15rem, #ddf0eb 0rem 0.1rem 0.2rem -0.1rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 998;
+    height: 6vh;
+}
+
+input[type="text"]  {
+    font-size: 5vw;
+    padding: 2%;
+    width: 85%;
+    outline: none;
+    background-color: transparent;
+    color: #55665e;
+}
+
+i   {
+    font-size: 5vw;
+    background-color: transparent;
+    opacity: 0.75;
+}
+
+.cart-button {
+  float: right;
+  border-radius: 0.25rem;
+  background-color: white;
+  color: #50b299;
+  border-radius: 2rem;
+  padding: 25%;
+  box-shadow: #ddf0eb 0 0 0.5rem 0.2rem;
+}
+
+
+.content  {
+  height: 75vh;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.medicine-container {
+  height: 12vh;
+  width: 90%;
+  margin: 2% auto;
+  border-radius: 0.5rem ;
+  background-color: #e4f8ef;
+  box-shadow: #ddf0eb 0 0 0.5rem 0.2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+.medicine-name, .price, .action  {
+  height: 10vh;
+  float: left;
+  margin: auto;
+  padding: 1%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 4vw;
+  color: #55665e;
+}
+.medicine-name  {
+  width: 45%
+}
+
+.price  {
+  width: 25%;
+  font-weight: 200;
+}
+
+.action  {
+  width: 20%;
+}
+
+.add-to-cart  {
+  color: white;
+  background-color: transparent;
+  color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+::placeholder   {
+  font-weight: 100;
+}

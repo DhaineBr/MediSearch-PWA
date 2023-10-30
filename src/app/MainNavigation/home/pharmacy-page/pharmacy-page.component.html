@@ -1,1 +1,29 @@
-<p>pharmacy-page works!</p>
+<div class="container">
+  <div class="header">
+      <button routerLink="/home/landing" class="back"><i class="fa-solid fa-arrow-left-long"></i></button>
+      <p class="name">Pharmacy Name</p>
+  </div>
+  <div class="top-nav">
+    <div class="searchbar">
+        <i class="fa fa-search"></i><input type="text" placeholder="Search">
+    </div>
+    <div class="cart">
+      <button class="cart-button" routerLink="/home/cart"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="medicine-container">
+      <div class="medicine-name">
+        Medicine Name
+      </div>
+      <div class="price">
+        Php 150
+      </div>
+      <div class="action">
+        <button class="add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
