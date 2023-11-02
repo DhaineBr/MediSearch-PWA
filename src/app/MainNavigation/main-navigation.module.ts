@@ -9,6 +9,9 @@ import { MatInputModule } from '@angular/material/input';
 import { NgFor } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AccountComponent } from './account/account.component';
 import { ReservationComponent } from './reservation/reservation.component';
@@ -17,10 +20,11 @@ import { PharmaciesComponent } from './pharmacies/pharmacies.component';
 import { PharmacyPageComponent } from './home/pharmacy-page/pharmacy-page.component';
 import { CartComponent } from './home/cart/cart.component';
 import { InfoComponent } from './account/info/info.component';
-import { AddressesComponent } from './account/addresses/addresses.component';
-import { FollowingComponent } from './account/following/following.component';
-import { ReviewsComponent } from './account/reviews/reviews.component';
-import { HistoryComponent } from './account/history/history.component';
+import { CartPopupComponent } from './home/pharmacy-page/cart-popup/cart-popup.component';
+import { HistoryComponent } from './reservation/history/history.component';
+import { HistoryDetailComponent } from './reservation/history-detail/history-detail.component';
+import { ReservationDetailComponent } from './reservation/reservation-detail/reservation-detail.component';
+
 
 
 @NgModule({
@@ -33,10 +37,11 @@ import { HistoryComponent } from './account/history/history.component';
     PharmacyPageComponent,
     CartComponent,
     InfoComponent,
-    AddressesComponent,
-    FollowingComponent,
-    ReviewsComponent,
+    CartPopupComponent,
     HistoryComponent,
+    HistoryDetailComponent,
+    ReservationDetailComponent,
+
   ],
   imports: [
     CommonModule,
@@ -47,6 +52,9 @@ import { HistoryComponent } from './account/history/history.component';
     NgFor,
     MatInputModule,
     FormsModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class MainNavigationModule { }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import * as L from 'leaflet';
 
 interface Pharmacy {
   pharmacyName: string;
@@ -26,7 +28,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.pharmacies =this.generateDummyData(5);
-    this.pharmacyList = this.generateDummyData(10)
+    this.pharmacyList = this.generateDummyData(10);
+
   }
 
   generateDummyData(count: number): Pharmacy[] {
@@ -89,6 +92,12 @@ export class HomeComponent implements OnInit {
   }
 
   optionDistance()  {
+
+  }
+
+
+  //open map popup
+  openMapPopup(): void{
 
   }
 }

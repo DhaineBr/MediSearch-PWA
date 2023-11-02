@@ -8,10 +8,9 @@ import { AccountComponent } from './account/account.component';
 import { PharmacyPageComponent } from './home/pharmacy-page/pharmacy-page.component';
 import { CartComponent } from './home/cart/cart.component';
 import { InfoComponent } from './account/info/info.component';
-import { AddressesComponent } from './account/addresses/addresses.component';
-import { FollowingComponent } from './account/following/following.component';
-import { ReviewsComponent } from './account/reviews/reviews.component';
-import { HistoryComponent } from './account/history/history.component';
+import { HistoryComponent } from './reservation/history/history.component';
+import { HistoryDetailComponent } from './reservation/history-detail/history-detail.component';
+import { ReservationDetailComponent } from './reservation/reservation-detail/reservation-detail.component';
 
 const routes: Routes = [
   {path: 'home',
@@ -24,10 +23,9 @@ const routes: Routes = [
     {path: 'account', component: AccountComponent},
     {path: 'pharmacies', component: PharmaciesComponent},
     {path: 'info', component: InfoComponent},
-    {path: 'addresses', component: AddressesComponent},
-    {path: 'following', component: FollowingComponent},
-    {path: 'reviews', component: ReviewsComponent},
-    {path: 'history', component: HistoryComponent}
+    {path: 'history', component: HistoryComponent},
+    {path: 'history-detail', component: HistoryDetailComponent},
+    {path: 'reservation-detail', component: ReservationDetailComponent}
   ]},
 
 ];

@@ -1,8 +1,11 @@
 <div class="container">
-    <div class="header">Reservations</div>
+    <div class="header">
+      <p>Reservations</p>
+      <button routerLink="/home/history"><i class="fa-solid fa-clock-rotate-left"></i></button>
+    </div>
     <div class="mid-container">
       <ng-container *ngFor="let reservation of reservations">
-        <div class="reserved-meds" routerLink="/home/landing">
+        <div class="reserved-meds" routerLink="/home/reservation-detail">
             <span class="cell-header">{{reservation.orderID}}</span> <br>
             <span class="store-details">{{reservation.storeName}}<br/>
               {{reservation.storeAddress}} <br/></span>

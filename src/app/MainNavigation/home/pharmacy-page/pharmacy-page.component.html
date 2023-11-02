@@ -1,7 +1,10 @@
 <div class="container">
   <div class="header">
-      <button routerLink="/home/landing" class="back"><i class="fa-solid fa-arrow-left-long"></i></button>
-      <p class="name">Pharmacy Name</p>
+      <div class="nav-group">
+        <button routerLink="/home/landing" class="back"><i class="fa-solid fa-arrow-left-long"></i></button>
+        <p class="name">Pharmacy Name</p>
+      </div>
+
   </div>
   <div class="top-nav">
     <div class="searchbar">
@@ -12,18 +15,27 @@
     </div>
   </div>
   <div class="content">
-    <div class="medicine-container">
-      <div class="medicine-name">
-        Medicine Name
-      </div>
-      <div class="price">
-        Php 150
-      </div>
-      <div class="action">
-        <button class="add-to-cart"><i class="fa-solid fa-cart-plus"></i></button>
-      </div>
+    <ng-container *ngFor="let medicine of medicines">
+      <div class="medicine-container">
 
-    </div>
+        <div class="medicine-name">
+          {{medicine.medicineName}}
+        </div>
+        <div class="price">
+          {{medicine.medicinePrice}}
+        </div>
+        <div class="action">
+          <button class="add-to-cart" (click)="addToCart()"><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+
+      </div>
+    </ng-container>
+
+    <button mat-fab class="floating-button">
+      <span class="directions"><i class="fa-solid fa-diamond-turn-right"></i></span>
+    </button>
   </div>
+
+
 
 </div>

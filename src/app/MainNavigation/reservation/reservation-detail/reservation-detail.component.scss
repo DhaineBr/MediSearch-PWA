@@ -1,0 +1,128 @@
+*   {
+  border-style: solid;
+  border-color: white
+}
+
+.container  {
+  height: 92.5vh;
+  z-index: 901;
+  overflow-y: hidden;
+  padding: 0 0 0 0;
+  width: 99%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 95%;
+  font-size: 7.5vw;
+  padding: 2.5% 1% 2.5% 2.5%;
+  font-weight: 600;
+  color: #55665e;
+  position: sticky;
+  background-color: white;
+  top: 0;
+  z-index: 1000;
+  float: left;
+}
+
+.back  {
+  background-color: transparent;
+  color: #55665e;
+  height: 3.5vh;
+  padding: 0 2% 0 0 ;
+  float: left;
+  font-weight: 200;
+  font-size: 3.5vw;
+}
+
+p {
+  font-size: 4vw;
+  float: left;
+  margin: 0;
+  color: #55665e;
+}
+
+
+//middle container
+
+.middle-container {
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0 0 15% 0
+}
+.map-container  {
+  width: 100%;
+  height: 55vh;
+  overflow-y: scroll;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.map  {
+  width: 90%;
+  height: 45vh;
+  border-radius: 0.5rem;
+  box-shadow: #50b299 0 0 0.25rem 0.02rem;
+}
+
+.order-detail, .validity-period {
+  width: 100%;
+  height: 4vh;
+}
+
+.summary {
+  width: 100%;
+  margin: 5% 0 0 0;
+  height: 4vh;
+}
+
+
+.medicine, .validity-date, .total {
+  width: 60%;
+  float: left;
+
+}
+
+.quantity, .date, .total-price {
+  width: 30%;
+  float: right;
+  font-weight: 100;
+}
+
+.id {
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  opacity: 0.5;
+  margin: 5% 0 0 0;
+}
+.order-id {
+  height: 5vw;
+  text-align: center;
+}
+
+.details-container  {
+  min-height: 15vh;
+  max-height: 30vh;
+  padding: 0 5%;
+}
+
+.bottom-container  {
+  height: 7.5vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.cancel-button  {
+  font-size: 4.5vw;
+  background-color: transparent;
+  color: #AA0441;
+  opacity: 0.5;
+}

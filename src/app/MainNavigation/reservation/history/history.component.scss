@@ -9,19 +9,20 @@
   border-style: hidden;
 }
 
-p {
-  width: 50%;
+button  {
+  background-color: transparent;
+  color: #55665e;
+  height: 3.5vh;
+  padding: 0 2% 0 0 ;
   float: left;
-  margin: 0;
+  font-weight: 200;
+  font-size: 3.5vw;
 }
 
-button  {
-  color: #55665e;
-  background-color: transparent;
-  font-size: 5vw;
-  opacity: 0.5;
-  float: right;
-  margin: 0 0 0 37.5%;
+p {
+  width: 10%;
+  float: left;
+  margin: 0;
 }
 
 .header {
@@ -34,9 +35,7 @@ button  {
   background-color: white;
   top: 0;
   z-index: 1000;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  float: left;
 }
 
 .mid-container  {

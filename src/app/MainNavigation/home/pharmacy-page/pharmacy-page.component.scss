@@ -13,7 +13,7 @@
 }
 
 .header {
-  font-size: 3.5vw;
+  font-size: 4.5vw;
   background-color: #50b299;
   color: white;
   padding: 2% 0 0 3%;
@@ -22,7 +22,15 @@
   position: relative;
   width: 100%;
   font-size: 200;
+  height: 8vw;
 }
+
+.nav-group  {
+  width: 100%;
+  float: left;
+}
+
+
 
 .back {
   background-color: transparent;
@@ -30,11 +38,12 @@
   height: 3.5vh;
   padding: 0 2% 0 0 ;
   float: left;
-  font-size: 200;
+  font-weight: 200;
+  font-size: 3.5vw;
 }
 
 .name  {
-  width: 40%;
+  width: 80%;
   float: left;
   margin: 0;
   font-size: 200;
@@ -103,9 +112,9 @@ i   {
 }
 
 .medicine-container {
-  height: 12vh;
+  height: 10vh;
   width: 90%;
-  margin: 2% auto;
+  margin: 5% auto;
   border-radius: 0.5rem ;
   background-color: #e4f8ef;
   box-shadow: #ddf0eb 0 0 0.5rem 0.2rem;
@@ -146,12 +155,25 @@ i   {
 }
 
 
+.directions {
+  color: #55665e;
+  background-color: transparent;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  z-index: 1000;
+}
 
 
-
-
-
-
+@media (max-width: 768px) {
+  .floating-button {
+    bottom: 12%;
+    right: 2%;
+  }
+}
 
 
 

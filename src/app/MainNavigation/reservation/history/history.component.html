@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="header">
+    <button routerLink="/home/reservation"><i class="fa-solid fa-arrow-left-long"></i></button>
+    <p>History</p>
+  </div>
+  <div class="mid-container">
+    <ng-container *ngFor="let reservation of reservations">
+      <div class="reserved-meds" routerLink="/home/history-detail">
+          <span class="cell-header">{{reservation.orderID}}</span> <br>
+          <span class="store-details">{{reservation.storeName}}<br/>
+            {{reservation.storeAddress}} <br/></span>
+          <label for="time-to-live">Transaction Date:</label>
+          <span class="time-to-live"> {{reservation.transactionDate | date }}</span>
+      </div>
+    </ng-container>
+
+
+  </div>
+
+</div>

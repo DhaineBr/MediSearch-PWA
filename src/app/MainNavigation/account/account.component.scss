@@ -1,112 +1,99 @@
 .container  {
-    height: 87.5vh;
+    height: 92.5vh;
     z-index: 901;
     overflow-y: scroll;
-    padding: 5% 0 0 0;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
 * {
-    border-style: hidden;
+    border-style: solid;
     outline: none;
 }
 
-.account-header {
-    color: #55665e;
-    height: 12.5vh;
-    width: 90%;
-    margin: auto;
-    font-size: 7.5vw;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    text-align: center;
-    border-radius: 1rem;
-
-    background-color: #ddf0eb;
-    box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
+.top-container  {
+  height: 70vh;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto 0 auto;
 }
 
-.signout   {
-    color: #AA0441;
-    height: 6.25vh;
-    width: 90%;
-    display: flex;
-    font-size: 6.25vw;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffecf3;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
+.account-info {
+  color: #55665e;
+  height: 45vh;
+  width: 100%;
+  margin: auto;
+  font-size: 5vw;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
+  margin: 5% 0 0 0;
+}
 
-    display: flex;
-    margin: 32.5vh auto 0 auto;
+.content  {
+  padding: 5% 0 5% 0;
+  overflow-y: scroll;
+  height: 92.5vh;
 }
 
 .middle-container   {
-    height: 27.5vh;
-    width: 90%;
-    margin: 5% auto 0 auto;
-}
-
-.left   {
-    float: left;
-    width: 47.5%;
-    height: 100%;
-    text-align: center;
-    font-size: 5vw;
-    color: #454545;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.right   {
-    float: right;
-    width: 47.5%;
-    height: 100%;
-    text-align: center;
-    font-size: 5vw;
-    color: #454545;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-a.account-header   {
-    color: #55665e;
-}
-
-.addresses, .following, .history, .review   {
-    display: flex;
-    height: 42.5%;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-
-    background-color: white;
-    width: 100%;
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
-    position: relative; /* Added position relative to enable positioning of the ripple element */
-    overflow: hidden; /* Added to hide overflow from ripple element */
-    cursor: pointer;
-
-    &:after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      transform: scale(0);
-      animation: ripple-animation 0.6s linear;
-      background-color: rgba(0, 0, 0, 0.4); /* Adjust the color and transparency */
-}
-
-    &:active::after {
-    transform: scale(4);
-    opacity: 0;
-  }
+  height: 32vh;
+  width: 90%;
+  margin: 5% auto 0 auto;
 }
 
 
+.addresses  {
+  text-align: left;
+  min-height: 32vh;
+  max-height: 50vh;
+}
+
+.header {
+  color: #55665e;
+  font-size: 6.5vw;
+  font-weight: 700;
+}
+
+.info-header  {
+  font-size: 5vw;
+  font-weight: 700;
+}
+
+.info {
+  font-size: 3.75vw;
+  font-weight: 100;
+  margin: 0 0 5% 0;
+}
+
+.info, .info-header {
+  width: 95%;
+}
+
+
+.delete {
+  color: #AA0441;
+  font-size: 5vw;
+  background-color: transparent;
+}
+
+.signout   {
+  color: #AA0441;
+  height: 6.25vh;
+  width: 90%;
+  display: flex;
+  font-size: 6.25vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffecf3;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
+  display: flex;
+  margin: 2.5vh auto 0 auto;
+}
