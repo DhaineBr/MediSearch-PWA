@@ -109,11 +109,16 @@ export class HomeComponent implements OnInit {
 
   //open map popup
   constructor(public dialog: MatDialog) {}
-  openMapPopup(): void{
+  openMapPopup(): void {
     const dialogRef = this.dialog.open(MapComponent, {
       width: '45vh',
       height: '50vh',
       data: { }
     });
+
+    dialogRef.afterClosed().subscribe(result => {
+      localStorage.setItem('mapPopupShown', 'true');
+    });
   }
+
 }

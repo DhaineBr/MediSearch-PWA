@@ -12,34 +12,39 @@ export class MapComponent implements OnInit {
   private map: any;
   private currentMarker: L.Marker | null = null;
 
+  constructor(private coordinateService: CoordinateService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
-    if (!this.map) {
-      this.map = L.map('map');
+    this.map = L.map('map');
 
-      const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 15,
-        minZoom: 10,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      });
-      tiles.addTo(this.map);
+    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 20,
+      minZoom: 10,
+      attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+    tiles.addTo(this.map);
 
-      this.map.on('click', (e: L.LeafletMouseEvent) => {
-        this.updateLocation(e.latlng);
-      });
+    this.map.on('click', (e: L.LeafletMouseEvent) => {
+      this.updateLocation(e.latlng);
+    });
 
-
+    const savedCoordinates = this.coordinateService.getCoordinates();
+    if (savedCoordinates) {
+      this.map.setView(savedCoordinates, 15);
+      this.updateLocation(savedCoordinates); // Add the marker at the saved coordinates
+    } else {
       this.map.locate({ setView: true, maxZoom: 15 });
-
-      this.map.on('locationfound', (e: L.LocationEvent) => {
-        this.updateLocation(e.latlng);
-      });
-
-      this.map.on('locationerror', (e: L.ErrorEvent) => {
-        console.log(e.message);
-      });
     }
+
+    this.map.on('locationfound', (e: L.LocationEvent) => {
+      this.updateLocation(e.latlng);
+    });
+
+    this.map.on('locationerror', (e: L.ErrorEvent) => {
+      console.log(e.message);
+    });
   }
+
 
 
   updateLocation(latlng: L.LatLngExpression): void {
@@ -68,7 +73,7 @@ export class MapComponent implements OnInit {
   }
 
 
-constructor(private coordinateService: CoordinateService, private dialog: MatDialog) {}
+
 
 
 onSubmitForm(): void {
