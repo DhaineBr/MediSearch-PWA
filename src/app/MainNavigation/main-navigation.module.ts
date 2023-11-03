@@ -24,6 +24,7 @@ import { CartPopupComponent } from './home/pharmacy-page/cart-popup/cart-popup.c
 import { HistoryComponent } from './reservation/history/history.component';
 import { HistoryDetailComponent } from './reservation/history-detail/history-detail.component';
 import { ReservationDetailComponent } from './reservation/reservation-detail/reservation-detail.component';
+import { MapComponent } from './home/map/map.component';
 
 
 
@@ -41,6 +42,7 @@ import { ReservationDetailComponent } from './reservation/reservation-detail/res
     HistoryComponent,
     HistoryDetailComponent,
     ReservationDetailComponent,
+    MapComponent,
 
   ],
   imports: [

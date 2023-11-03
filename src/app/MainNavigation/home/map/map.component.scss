@@ -1,0 +1,42 @@
+* {
+  background-color: white;
+  border-style: hidden;
+}
+
+h2 {
+  color: #55665e;
+  font-family: Idealist Sans;
+  padding: 0 0 0 2.5%;
+}
+
+mat-dialog-content {
+  height: 50vh;
+  margin: -5% 0 0 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #55665e;
+}
+
+#map  {
+  width: 40vh;
+  height: 40vh;
+  z-index: 1000;
+  border-radius: 0.5rem;
+}
+
+.label  {
+  color: #55665e;
+}
+
+.confirm {
+  color: white;
+  background-color: #50b299;
+  padding: 1% 2.5%;
+  border-radius: 0.5rem;
+  font-size: 4.5vw;
+  float: right;
+  margin: auto;
+  font-weight: 100;
+}

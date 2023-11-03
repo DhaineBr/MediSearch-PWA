@@ -250,6 +250,25 @@ option  {
 }
 
 
+.floating-button {
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  z-index: 1000;
+}
+
+
+@media (max-width: 768px) {
+  .floating-button {
+    bottom: 12%;
+    right: 2%;
+  }
+}
+
+.location {
+  color: #55665e;
+  background-color: transparent;
+}
 
 ::placeholder   {
     font-weight: 100;

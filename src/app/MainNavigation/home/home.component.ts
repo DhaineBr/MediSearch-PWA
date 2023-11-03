@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MapComponent } from './map/map.component';
 import { Router } from '@angular/router';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
-import * as L from 'leaflet';
+
 
 interface Pharmacy {
   pharmacyName: string;
@@ -25,11 +26,17 @@ export class HomeComponent implements OnInit {
 
   pharmacies: Pharmacy[] = [];
   pharmacyList: Pharmacy[] = [];
+  mapPopupOpened: boolean = false;
 
   ngOnInit(): void {
     this.pharmacies =this.generateDummyData(5);
     this.pharmacyList = this.generateDummyData(10);
+    const shouldShowPopup = localStorage.getItem('mapPopupShown');
 
+    if (!shouldShowPopup) {
+      this.openMapPopup();
+      localStorage.setItem('mapPopupShown', 'true');
+    }
   }
 
   generateDummyData(count: number): Pharmacy[] {
@@ -53,6 +60,10 @@ export class HomeComponent implements OnInit {
   }
 
 
+  resetMapPopupState() {
+    localStorage.removeItem('mapPopupShown');
+    this.openMapPopup();
+  }
 
   //dropdown select menu
   selectedSorting: string = 'aToZ';
@@ -97,7 +108,12 @@ export class HomeComponent implements OnInit {
 
 
   //open map popup
+  constructor(public dialog: MatDialog) {}
   openMapPopup(): void{
-
+    const dialogRef = this.dialog.open(MapComponent, {
+      width: '45vh',
+      height: '62.5vh',
+      data: { }
+    });
   }
 }
