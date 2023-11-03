@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CoordinateService } from '../../coordinate.service';
+import { MatDialog } from '@angular/material/dialog';
 import * as L from 'leaflet';
 
 @Component({
@@ -9,6 +11,7 @@ import * as L from 'leaflet';
 export class MapComponent implements OnInit {
   private map: any;
   private currentMarker: L.Marker | null = null;
+
 
   ngOnInit(): void {
     if (!this.map) {
@@ -38,6 +41,7 @@ export class MapComponent implements OnInit {
     }
   }
 
+
   updateLocation(latlng: L.LatLngExpression): void {
     if (this.currentMarker) {
       this.map.removeLayer(this.currentMarker);
@@ -50,18 +54,39 @@ export class MapComponent implements OnInit {
     });
 
     this.currentMarker = L.marker(latlng, { icon: customIcon }).addTo(this.map);
+
+    // Convert latlng to a LatLng object
+    const latLng = L.latLng(latlng);
+
+    // Get the "coordinates" span element
+    const coordinatesSpan = document.querySelector('.coordinates');
+
+    if (coordinatesSpan) {
+      // Update the content of the span with the latitude and longitude values
+      coordinatesSpan.textContent = `${latLng.lat} ${latLng.lng}`;
+    }
   }
 
 
+constructor(private coordinateService: CoordinateService, private dialog: MatDialog) {}
 
-  //form that save the user input
-  constructor(private coordinateService: CoordinateService) {}
 
-  onSubmitForm(): void {
-    // Process form data and obtain the coordinates
-    const coordinates: [number, number] = [latitude, longitude];
-
-    // Save the coordinates using the service
-    this.coordinateService.setCoordinates(coordinates);
+onSubmitForm(): void {
+  const coordinatesSpan = document.querySelector('.coordinates');
+  if (coordinatesSpan) {
+    const latLngString = coordinatesSpan.textContent;
+    if (latLngString) {
+      const [lat, lng] = latLngString.split(' ').map(Number);
+      const coordinates: [number, number] = [lat, lng];
+      this.coordinateService.setCoordinates(coordinates);
+      console.log(coordinates)
+      this.closeDialog();
+    }
   }
+}
+
+closeDialog() {
+  this.dialog.closeAll();
+}
+
 }

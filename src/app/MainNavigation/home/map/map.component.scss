@@ -19,9 +19,16 @@ mat-dialog-content {
   color: #55665e;
 }
 
+mat-dialog-actions  {
+  align-items: end;
+  text-align: right;
+  justify-content: end;
+
+}
+
 #map  {
   width: 40vh;
-  height: 40vh;
+  height: 70vh;
   z-index: 1000;
   border-radius: 0.5rem;
 }
@@ -39,4 +46,17 @@ mat-dialog-content {
   float: right;
   margin: auto;
   font-weight: 100;
+}
+
+
+
+.button {
+  width: 100%;
+  text-align: right;
+}
+
+.coordinates  {
+  color: #55665e;
+  font-weight: 100;
+  font-size: 3vw;
 }

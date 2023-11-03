@@ -112,7 +112,7 @@ export class HomeComponent implements OnInit {
   openMapPopup(): void{
     const dialogRef = this.dialog.open(MapComponent, {
       width: '45vh',
-      height: '62.5vh',
+      height: '50vh',
       data: { }
     });
   }

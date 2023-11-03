@@ -2,8 +2,11 @@
 <mat-dialog-content>
   <div id="map"></div>
   <div class="label">Coordinates</div>
-  <span class="coordinates"></span>
+  <form (ngSubmit)="onSubmitForm()">
+    <span class="coordinates"></span>
+  <mat-dialog-actions>
+    <button type="submit" class="confirm">Confirm</button>
+  </mat-dialog-actions>
+  </form>
+
 </mat-dialog-content>
-<mat-dialog-actions>
-  <button type="submit" class="confirm">Confirm</button>
-</mat-dialog-actions>
