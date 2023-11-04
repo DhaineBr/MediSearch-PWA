@@ -33,7 +33,8 @@ export class MapComponent implements OnInit {
       this.map.setView(savedCoordinates, 15);
       this.updateLocation(savedCoordinates); // Add the marker at the saved coordinates
     } else {
-      this.map.locate({ setView: true, maxZoom: 15 });
+      this.map.setView([13.758291362262883, 121.05965711541901], 15);
+
     }
 
     this.map.on('locationfound', (e: L.LocationEvent) => {
