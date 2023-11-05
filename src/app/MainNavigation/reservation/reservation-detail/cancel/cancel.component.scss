@@ -1,0 +1,37 @@
+* {
+  background-color: white;
+  border: hidden;
+  outline: none;
+}
+
+mat-dialog-content  {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.message  {
+  color: #55665e;
+  font-size: 4vw;
+}
+
+button  {
+  padding: 2.5% 5%;
+  margin: auto;
+  border-radius: 0.5rem;
+  font-size: 4vw;
+  font-weight: 100;
+}
+
+.no {
+  opacity: 0.5;
+  color: #AA0441;
+}
+
+.yes  {
+  background-color: #50b299;
+  color: white;
+}
+
+

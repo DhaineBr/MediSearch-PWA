@@ -1,1 +1,24 @@
-<p>history-detail works!</p>
+<mat-dialog-content>
+  <div class="order-detail">
+    <table class="summary">
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+      </tr>
+      <tr>
+        <td>Biogesic</td>
+        <td>5</td>
+        <td>10.98</td>
+      </tr>
+    </table>
+  </div>
+  <div class="total">
+    <p>Total: <span id="total-price">Php 10.98</span></p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-content>
+  <div class="button">
+    <button class="close" (click)="closePopup()">Close</button>
+  </div>
+</mat-dialog-content>

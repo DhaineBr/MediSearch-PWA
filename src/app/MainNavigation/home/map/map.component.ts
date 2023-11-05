@@ -31,7 +31,7 @@ export class MapComponent implements OnInit {
     const savedCoordinates = this.coordinateService.getCoordinates();
     if (savedCoordinates) {
       this.map.setView(savedCoordinates, 15);
-      this.updateLocation(savedCoordinates); // Add the marker at the saved coordinates
+      this.updateLocation(savedCoordinates); 
     } else {
       this.map.setView([13.758291362262883, 121.05965711541901], 15);
 

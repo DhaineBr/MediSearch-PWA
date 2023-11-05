@@ -1,6 +1,7 @@
 <div class="container">
   <div class="header">
     <button class="back" routerLink="/home/reservation"><i class="fa-solid fa-arrow-left-long"></i></button>
+    <p class="name">Pharmacy Name</p>
   </div>
   <div class="middle-container">
     <div class="map-container">
@@ -39,7 +40,8 @@
         </div>
       </div>
       <div class="bottom-container">
-        <button class="cancel-button">Cancel Reservation</button>
+        <button class="cancel-button" (click)="cancelTransaction()">Cancel</button>
+        <button class="received" (click)="confirmTransaction()">Order Received</button>
       </div>
     </div>
   </div>

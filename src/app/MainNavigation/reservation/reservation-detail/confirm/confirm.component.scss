@@ -1,0 +1,66 @@
+* {
+  border: hidden;
+  background-color: white;
+  color: #55665e;
+  overflow: hidden;
+  outline: none
+}
+
+.star-rating {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.star {
+  font-size: 32px;
+  cursor: pointer;
+  color: rgb(155, 155, 155);
+}
+
+h2  {
+  font-family: Idealist Sans;
+  font-weight: 400;
+  text-align: center;
+}
+
+p  {
+  font-weight: 100;
+  width: 100%;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.filled {
+  color: gold;
+}
+
+mat-dialog-content  {
+  text-align: center;
+  margin: -5vh 0 0 0;
+}
+
+mat-dialog-actions  {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.cancel {
+  float: left;
+  margin: auto;
+  color: #AA0441;
+  font-weight: 100;
+  opacity: 0.5;
+}
+
+.confirm {
+  float: right;
+  margin: auto;
+  color: white;
+  background-color: #50b299;
+  font-weight: 100;
+  padding: 1% 3%;
+  border-radius: 0.5rem;
+}

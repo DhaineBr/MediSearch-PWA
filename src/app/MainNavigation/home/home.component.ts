@@ -29,15 +29,14 @@ export class HomeComponent implements OnInit {
   mapPopupOpened: boolean = false;
 
   ngOnInit(): void {
-    this.pharmacies =this.generateDummyData(5);
+    this.pharmacies = this.generateDummyData(5);
     this.pharmacyList = this.generateDummyData(10);
     const shouldShowPopup = localStorage.getItem('mapPopupShown');
 
     if (!shouldShowPopup) {
       this.openMapPopup();
-      localStorage.setItem('mapPopupShown', 'true');
     }
-  }
+}
 
   generateDummyData(count: number): Pharmacy[] {
     const dummyPharmacy: Pharmacy[] = [];
@@ -119,6 +118,6 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       localStorage.setItem('mapPopupShown', 'true');
     });
-  }
+}
 
 }

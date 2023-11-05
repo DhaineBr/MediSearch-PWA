@@ -1,0 +1,111 @@
+.container  {
+  height: 92.5vh;
+  z-index: 901;
+  overflow-y: scroll;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+* {
+  border-style: hidden;
+  outline: none;
+}
+
+.top-container  {
+  height: 70vh;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto 0 auto;
+}
+
+.account-info {
+  color: #55665e;
+  height: 45vh;
+  width: 100%;
+  margin: auto;
+  font-size: 5vw;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: white;
+  margin: 5% 0 0 0;
+  padding: 2.5% 0 0 0;
+}
+
+.content  {
+  padding: 5% 0 5% 0;
+  overflow-y: scroll;
+  height: 92.5vh;
+}
+
+.middle-container   {
+  height: 32vh;
+  width: 90%;
+  margin: 5% auto 0 auto;
+}
+
+
+
+
+.header {
+  color: #55665e;
+  font-size: 6.5vw;
+  font-weight: 700;
+}
+
+.back {
+  color: #55665e;
+  font-size: 6.5vw;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+
+.info-header  {
+  font-size: 5vw;
+  font-weight: 700;
+}
+
+.info {
+  font-size: 3.75vw;
+  font-weight: 100;
+  padding: 1% 0 0 0;
+  margin: 0 0 5% 0;
+}
+
+input[type="text"], input[type="email"] {
+  font-size: 3.75vw;
+  font-weight: 100;
+  color: #55665e;
+  box-shadow: rgba(17, 17, 26, 0.1) 0rem 0rem 1rem;
+  padding: 1%;
+}
+
+.info, .info-header {
+  width: 95%;
+}
+
+.delete {
+  color: #AA0441;
+  font-size: 5vw;
+  background-color: transparent;
+}
+
+.save   {
+  color: white;
+  height: 6.25vh;
+  width: 90%;
+  display: flex;
+  font-size: 6.25vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #50b299;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0.1rem 0.1rem 0.2rem;
+  display: flex;
+  margin: 2.5vh auto 0 auto;
+}

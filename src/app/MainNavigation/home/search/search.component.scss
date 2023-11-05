@@ -1,14 +1,14 @@
 .container  {
-    min-height: 250vh;
-    z-index: 901;
-    overflow-y: scroll;
-    width: 100%;
-    overflow-x: hidden;
+  min-height: 250vh;
+  z-index: 901;
+  overflow-y: scroll;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 *   {
-    border-style: hidden;
-    outline: none;
+  border-style: hidden;
+  outline: none;
 }
 
 .top-nav {
@@ -31,32 +31,32 @@
 }
 
 .searchbar  {
-    text-align: center;
-    margin: 1% auto;
-    width: 80%;
-    border-radius: 0.75rem;
-    color: #55665e;
-    box-shadow: #ddf0eb 0rem 0.2rem 0.3rem -0.15rem, #ddf0eb 0rem 0.1rem 0.2rem -0.1rem;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 998;
-    height: 6vh;
+  text-align: center;
+  margin: 1% auto;
+  width: 80%;
+  border-radius: 0.75rem;
+  color: #55665e;
+  box-shadow: #ddf0eb 0rem 0.2rem 0.3rem -0.15rem, #ddf0eb 0rem 0.1rem 0.2rem -0.1rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 998;
+  height: 6vh;
 }
 
 input[type="text"]  {
-    font-size: 5vw;
-    padding: 2%;
-    width: 85%;
-    outline: none;
-    background-color: transparent;
-    color: #55665e;
+  font-size: 5vw;
+  padding: 2%;
+  width: 85%;
+  outline: none;
+  background-color: transparent;
+  color: #55665e;
 }
 
 i   {
-    font-size: 5vw;
-    background-color: transparent;
-    opacity: 0.75;
+  font-size: 5vw;
+  background-color: transparent;
+  opacity: 0.75;
 }
 
 .cart-button {
@@ -144,7 +144,6 @@ h3  {
 
 .pharmacy-name  {
   font-size: 3.5vw;
-  font-weight: 700;
 }
 
 
@@ -204,9 +203,9 @@ option  {
   width: 95%;
   margin: auto;
   margin-bottom: 5%;
-  min-height: 15vh; /* Set a minimum height */
-  max-height: 20vh; /* Set a maximum height if needed */
-  overflow: hidden; /* Add vertical scrollbar when needed */
+  min-height: 15vh;
+  max-height: 20vh;
+  overflow: hidden;
   border-radius: 0.75rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.4rem -0.05rem, rgba(0, 0, 0, 0.06) 0rem 0.1rem 0.4rem -0.05rem;
   background-color: #e4f8ef;
@@ -261,10 +260,10 @@ option  {
 
 
 @media (max-width: 768px) {
-  .floating-button {
-    bottom: 12%;
-    right: 2%;
-  }
+.floating-button {
+  bottom: 12%;
+  right: 2%;
+}
 }
 
 .location {
@@ -273,6 +272,6 @@ option  {
 }
 
 ::placeholder   {
-    font-weight: 100;
+  font-weight: 100;
 }
 

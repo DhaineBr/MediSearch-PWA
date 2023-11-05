@@ -1,9 +1,8 @@
 <h2>Current Location</h2>
 <mat-dialog-content>
   <div id="map"></div>
-  <div class="label">Coordinates</div>
   <form (ngSubmit)="onSubmitForm()">
-    <span class="coordinates"></span>
+    <span class="coordinates" hidden></span>
   <mat-dialog-actions>
     <button type="submit" class="confirm">Confirm</button>
   </mat-dialog-actions>

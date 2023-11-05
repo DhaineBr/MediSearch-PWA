@@ -25,6 +25,9 @@ import { HistoryComponent } from './reservation/history/history.component';
 import { HistoryDetailComponent } from './reservation/history-detail/history-detail.component';
 import { ReservationDetailComponent } from './reservation/reservation-detail/reservation-detail.component';
 import { MapComponent } from './home/map/map.component';
+import { SearchComponent } from './home/search/search.component';
+import { ConfirmComponent } from './reservation/reservation-detail/confirm/confirm.component';
+import { CancelComponent } from './reservation/reservation-detail/cancel/cancel.component';
 
 
 
@@ -43,6 +46,9 @@ import { MapComponent } from './home/map/map.component';
     HistoryDetailComponent,
     ReservationDetailComponent,
     MapComponent,
+    SearchComponent,
+    ConfirmComponent,
+    CancelComponent,
 
   ],
   imports: [

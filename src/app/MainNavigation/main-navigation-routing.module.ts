@@ -11,6 +11,7 @@ import { InfoComponent } from './account/info/info.component';
 import { HistoryComponent } from './reservation/history/history.component';
 import { HistoryDetailComponent } from './reservation/history-detail/history-detail.component';
 import { ReservationDetailComponent } from './reservation/reservation-detail/reservation-detail.component';
+import { SearchComponent } from './home/search/search.component';
 
 const routes: Routes = [
   {path: 'home',
@@ -25,7 +26,8 @@ const routes: Routes = [
     {path: 'info', component: InfoComponent},
     {path: 'history', component: HistoryComponent},
     {path: 'history-detail', component: HistoryDetailComponent},
-    {path: 'reservation-detail', component: ReservationDetailComponent}
+    {path: 'reservation-detail', component: ReservationDetailComponent},
+    {path: 'search', component: SearchComponent}
   ]},
 
 ];

@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div class="top-nav">
+    <div class="searchbar"  routerLink="/home/search">
+        <i class="fa fa-search"></i><input type="text" placeholder="Search" autofocus>
+    </div>
+    <div class="cart">
+      <button class="cart-button" routerLink="/home/cart"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+  </div>
+
+
+  <div class="content">
+
+      <div class="all-pharmacies">
+        <ng-container *ngFor="let  pharmacy of pharmacyList">
+          <div class="store">
+            <div class="left">
+              Profile Pic
+            </div>
+            <div class="right">
+              <div class="store-detail-container" routerLink="/home/pharmacy">
+                  <span class="store-name">{{pharmacy.pharmacyName}}</span><br>
+                  <span class="store-details">{{pharmacy.pharmacyAddress}}<br>
+                    {{pharmacy.storeHours}}</span> <br>
+                  <i class="fa-solid fa-star-half-stroke" id="star-icon"></i><span class="rating">&nbsp; {{pharmacy.rating}}</span>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+
+    </div>
+  </div>
+

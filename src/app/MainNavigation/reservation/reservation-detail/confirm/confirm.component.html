@@ -1,0 +1,15 @@
+<h2>Confirm Order</h2>
+<mat-dialog-content>
+<p>How was your experience?</p>
+<div class="star-rating">
+  <i class="material-icons star" (click)="rate(1)" [class.filled]="rating >= 1">star</i>
+  <i class="material-icons star" (click)="rate(2)" [class.filled]="rating >= 2">star</i>
+  <i class="material-icons star" (click)="rate(3)" [class.filled]="rating >= 3">star</i>
+  <i class="material-icons star" (click)="rate(4)" [class.filled]="rating >= 4">star</i>
+  <i class="material-icons star" (click)="rate(5)" [class.filled]="rating >= 5">star</i>
+</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="cancel" (click)="closePopup()">Cancel</button>
+  <button class="confirm">Confirm</button>
+</mat-dialog-actions>

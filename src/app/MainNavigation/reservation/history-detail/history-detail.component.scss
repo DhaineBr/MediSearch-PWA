@@ -1,0 +1,50 @@
+* {
+  color: #55665e;
+  background-color: white;
+  border: hidden;
+}
+
+th  {
+  font-size: 3.5vw;
+}
+
+td  {
+  font-size: 3vw;
+}
+
+.summary  {
+  table-layout: auto;
+  width: 100%;
+}
+
+.total  {
+  width: 85%;
+  font-size: 3.5vw;
+  text-align: right;
+  font-weight: 100;
+}
+
+#total-price  {
+  width: 30%;
+  font-weight: 500;
+}
+
+mat-dialog-content  {
+  height: 25vh;
+}
+
+.button  {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.close  {
+  margin: auto;
+  color: white;
+  background-color: black;
+  padding: 1.5% 3%;
+  border-radius: 0.5rem;
+  font-size: 3.75vw;
+}

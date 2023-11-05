@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HistoryDetailComponent } from '../history-detail/history-detail.component';
+import { MatDialog } from '@angular/material/dialog';
 
 interface Reservation{
   orderID: string;
@@ -16,6 +17,7 @@ interface Reservation{
 export class HistoryComponent implements OnInit{
 
   reservations: Reservation[] = [];
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.reservations = this.generateDummyData(10);
@@ -38,5 +40,13 @@ export class HistoryComponent implements OnInit{
       dummyReservation.push(reservation);
     }
     return dummyReservation;
+  }
+
+  historyDetail(): void {
+    const dialogRef = this.dialog.open(HistoryDetailComponent, {
+      width: '45vh',
+      height: '35vh',
+      data: { }
+    });
   }
 }
