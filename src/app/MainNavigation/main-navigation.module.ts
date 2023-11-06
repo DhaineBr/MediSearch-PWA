@@ -28,6 +28,8 @@ import { MapComponent } from './home/map/map.component';
 import { SearchComponent } from './home/search/search.component';
 import { ConfirmComponent } from './reservation/reservation-detail/confirm/confirm.component';
 import { CancelComponent } from './reservation/reservation-detail/cancel/cancel.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -53,6 +55,7 @@ import { CancelComponent } from './reservation/reservation-detail/cancel/cancel.
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     MainNavigationRoutingModule,
     FormsModule,
     MatFormFieldModule,

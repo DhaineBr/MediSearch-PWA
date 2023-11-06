@@ -15,14 +15,14 @@
     </div>
   </div>
   <div class="content">
-    <ng-container *ngFor="let medicine of medicines">
+    <ng-container *ngFor="let medicine of listmedicines">
       <div class="medicine-container">
 
         <div class="medicine-name">
-          {{medicine.medicineName}}
+          {{this.medicine.name}}
         </div>
         <div class="price">
-          {{medicine.medicinePrice}}
+          {{medicine.price}}
         </div>
         <div class="action">
           <button class="add-to-cart" (click)="addToCart()"><i class="fa-solid fa-cart-plus"></i></button>

@@ -14,7 +14,7 @@ import { ReservationDetailComponent } from './reservation/reservation-detail/res
 import { SearchComponent } from './home/search/search.component';
 
 const routes: Routes = [
-  {path: 'home',
+  {path: '',
     component: MainNavigationComponent,
   children:  [
     {path: 'landing', component: HomeComponent},
@@ -29,7 +29,6 @@ const routes: Routes = [
     {path: 'reservation-detail', component: ReservationDetailComponent},
     {path: 'search', component: SearchComponent}
   ]},
-
 ];
 
 @NgModule({

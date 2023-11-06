@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CartPopupComponent } from './cart-popup/cart-popup.component';
+import { CustomersService } from 'src/app/services/customers.service';
 
 interface Medicine {
-  medicineName: string;
-  medicinePrice: string;
+  name: string;
+  price: string;
 }
 
 @Component({
@@ -16,7 +17,7 @@ export class PharmacyPageComponent implements OnInit{
 
   medicines: Medicine[] = [];
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private _customers : CustomersService) { }
   addToCart(): void {
     const dialogRef = this.dialog.open(CartPopupComponent, {
       width: '35vh',
@@ -29,23 +30,30 @@ export class PharmacyPageComponent implements OnInit{
     });
   }
 
+
   ngOnInit(){
-    this.medicines = this.generateDummyData(20)
+    this.getmedicines();
   }
 
-  generateDummyData(count: number): Medicine[] {
-    const dummyMedicine: Medicine[] = [];
+  listmedicines: any;
 
-    for (let i = 1; i <= count; i++ ) {
-
-      const medicine: Medicine = {
-        medicineName: `Medicine ` + i,
-        medicinePrice: `Php` + (5 + (i * 1.25)),
-      };
-      console.log(dummyMedicine)
-      dummyMedicine.push(medicine);
-    }
-    return dummyMedicine;
+  getmedicines() {
+    this._customers.getmedicines().subscribe((response) => {
+      this.listmedicines = response;
+      console.log(this.listmedicines);
+    });
   }
+
+  // ngOnInit(): void {
+  //   this.getordersbyID(6)
+  // }
+  // ordersinfo: any
+  // getordersbyID(id:number) {
+  //   this._customers.gettransactions(id).subscribe((response) => {
+  //     this.ordersinfo = response;
+  //     console.log(this.ordersinfo)
+  //   })
+  // }
+
 
 }
