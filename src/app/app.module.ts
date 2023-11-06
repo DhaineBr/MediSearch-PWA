@@ -8,7 +8,7 @@ import { SignupComponent } from './page/signup/signup.component';
 import { MainNavigationModule } from './MainNavigation/main-navigation.module';
 import { LoginComponent } from './page/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
+        ReactiveFormsModule,
+
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),

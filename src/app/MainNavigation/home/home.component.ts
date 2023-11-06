@@ -3,7 +3,8 @@ import { MapComponent } from './map/map.component';
 import { Router } from '@angular/router';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
 import { CustomersService } from 'src/app/services/customers.service';
-
+import * as turf from '@turf/turf';
+import { CoordinateService } from '../coordinate.service';
 
 interface Pharmacy {
   name: string;
@@ -35,11 +36,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     this.getpharmacies();
-
-    // this.pharmacies = this.generateDummyData(5);
-    // this.pharmacyList = this.generateDummyData(10);
-    const shouldShowPopup = localStorage.getItem('mapPopupShown');
-
+      const shouldShowPopup = localStorage.getItem('mapPopupShown');
+    // this.nearest();
 
 
     if (!shouldShowPopup) {
@@ -133,6 +131,42 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       localStorage.setItem('mapPopupShown', 'true');
     });
+}
+
+  nearest(){
+    const markers = [
+      turf.point([13.758562308118623, 121.05806924780772]),
+      turf.point([13.761292591154664, 121.05725385633166]),
+      turf.point([13.756561469788396, 121.05907775831758]),
+    ];
+
+    const referencePoint = turf.point([13.758541466140864, 121.05892755462462]);
+
+    let closestMarker = null;
+    let closestDistance = Number.MAX_VALUE;
+
+    markers.forEach(marker => {
+      const distance = turf.distance(referencePoint, marker);
+
+  if (distance < closestDistance) {
+    closestMarker = marker;
+    closestDistance = distance;
+  }
+
+
+  });
+
+  if (closestMarker) {
+    const nearestCoordinates = turf.getCoord(closestMarker);
+    console.log('Nearest marker coordinates:', nearestCoordinates);
+
+    const distanceInMeters = closestDistance * 1000;
+    const roundedDistance = distanceInMeters.toFixed(2);
+    console.log('Distance to nearest marker:', roundedDistance, 'meters');
+  } else {
+    console.log('No markers found.');
+  }
+
 }
 
 }

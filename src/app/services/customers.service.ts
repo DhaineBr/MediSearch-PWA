@@ -41,13 +41,12 @@ export class CustomersService {
 
 
 
-
-
-
-
-
-
-
-
+public postSignup(data: any): Observable<any> {
+  return this.http.post(`${this.url}/auth/customer/register`, data).pipe(
+    catchError((error) => {
+      return throwError(error);
+    }
+    ));
+}
 
 }
