@@ -16,14 +16,14 @@
 
 
       <div class="pharmacies">
-      <ng-container *ngFor="let pharmacy of pharmacies">
+      <ng-container *ngFor="let pharmacy of pharmacyList">
         <div class="pharmacy-card" routerLink="/home/pharmacy">
           <div class="top">
             <div class="profile">Profile Pic</div>
           </div>
           <div class="bottom">
-            <span class="pharmacy-name">{{pharmacy.pharmacyName}}</span><br>
-            <span class="pharmacy-details">{{pharmacy.pharmacyAddress}}<br>
+            <span class="pharmacy-name">{{pharmacy.name}}</span><br>
+            <span class="pharmacy-details">{{pharmacy.address}}<br>
               {{pharmacy.storeHours}}</span> <br>
             <i class="fa-solid fa-star-half-stroke" id="star-icon"></i><span class="rating">&nbsp; {{pharmacy.rating}}</span>
           </div>
@@ -54,8 +54,8 @@
             </div>
             <div class="right">
               <div class="store-detail-container" routerLink="/home/pharmacy">
-                  <span class="store-name">{{pharmacy.pharmacyName}}</span><br>
-                  <span class="store-details">{{pharmacy.pharmacyAddress}}<br>
+                  <span class="store-name">{{pharmacy.name}}</span><br>
+                  <span class="store-details">{{pharmacy.address}}<br> 
                     {{pharmacy.storeHours}}</span> <br>
                   <i class="fa-solid fa-star-half-stroke" id="star-icon"></i><span class="rating">&nbsp; {{pharmacy.rating}}</span>
               </div>

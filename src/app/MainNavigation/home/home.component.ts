@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { MapComponent } from './map/map.component';
 import { Router } from '@angular/router';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { CustomersService } from 'src/app/services/customers.service';
 
 
 interface Pharmacy {
-  pharmacyName: string;
-  pharmacyAddress: string;
+  name: string;
+  address: string;
   storeHours: string;
   rating: number;
 }
@@ -28,35 +29,50 @@ export class HomeComponent implements OnInit {
   pharmacyList: Pharmacy[] = [];
   mapPopupOpened: boolean = false;
 
+
+  constructor(public dialog: MatDialog, private _customers : CustomersService) { }
+
   ngOnInit(): void {
-    this.pharmacies = this.generateDummyData(5);
-    this.pharmacyList = this.generateDummyData(10);
+
+    this.getpharmacies();
+
+    // this.pharmacies = this.generateDummyData(5);
+    // this.pharmacyList = this.generateDummyData(10);
     const shouldShowPopup = localStorage.getItem('mapPopupShown');
+
+
 
     if (!shouldShowPopup) {
       this.openMapPopup();
     }
-}
-
-  generateDummyData(count: number): Pharmacy[] {
-    const dummyPharmacy: Pharmacy[] = [];
-
-    for (let i = 1; i <= count; i++ ) {
-
-      const rawRating = 4.03 + i / 20;
-      const roundedRating = parseFloat(rawRating.toFixed(2));
-
-      const pharmacy: Pharmacy = {
-        pharmacyName: `Pharmacy ` + i,
-        pharmacyAddress: `Brgy. ` + i,
-        storeHours: `8:00 AM - 8:00 PM`,
-        rating: roundedRating,
-      };
-      console.log(dummyPharmacy)
-      dummyPharmacy.push(pharmacy);
-    }
-    return dummyPharmacy;
   }
+
+  getpharmacies() {
+    this._customers.getpharmacies().subscribe((response) => {
+      this.pharmacyList = response;
+      console.log(this.pharmacyList);
+    });
+  }
+
+  // generateDummyData(count: number): Pharmacy[] {
+  //   const dummyPharmacy: Pharmacy[] = [];
+
+  //   for (let i = 1; i <= count; i++ ) {
+
+  //     const rawRating = 4.03 + i / 20;
+  //     const roundedRating = parseFloat(rawRating.toFixed(2));
+
+  //     const pharmacy: Pharmacy = {
+  //       pharmacyName: `Pharmacy ` + i,
+  //       pharmacyAddress: `Brgy. ` + i,
+  //       storeHours: `8:00 AM - 8:00 PM`,
+  //       rating: roundedRating,
+  //     };
+  //     console.log(dummyPharmacy)
+  //     dummyPharmacy.push(pharmacy);
+  //   }
+  //   return dummyPharmacy;
+  // }
 
 
   resetMapPopupState() {
@@ -90,11 +106,11 @@ export class HomeComponent implements OnInit {
 
 
   optionAToZ()  {
-    this.pharmacyList.sort((a, b) => a.pharmacyName.localeCompare(b.pharmacyName));
+    this.pharmacyList.sort((a, b) => a.name.localeCompare(b.name));
   }
 
   optionZToA()  {
-    this.pharmacyList.sort((a, b) => b.pharmacyName.localeCompare(a.pharmacyName));
+    this.pharmacyList.sort((a, b) => b.name.localeCompare(a.name));
   }
 
   optionRating()  {
@@ -106,8 +122,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-  //open map popup
-  constructor(public dialog: MatDialog) {}
+
   openMapPopup(): void {
     const dialogRef = this.dialog.open(MapComponent, {
       width: '45vh',

@@ -14,6 +14,7 @@ export class CustomersService {
 
 
   url = environment.apiProdURL
+
   public gettransactions(id: number): Observable<any>{
     return this.http.get(`${this.url}/customer-orders/${id}`).pipe(
       catchError((error) => {
@@ -30,6 +31,23 @@ export class CustomersService {
       ));
   }
 
-  
+  public getpharmacies(): Observable<any>{
+    return this.http.get(`${this.url}/pharmacies`).pipe(
+      catchError((error) => {
+        return throwError(error);
+      }
+      ));
+  }
+
+
+
+
+
+
+
+
+
+
+
 
 }

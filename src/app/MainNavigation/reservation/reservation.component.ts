@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CustomersService } from 'src/app/services/customers.service';
 
 interface Reservation {
-  orderID: string;
+  id: string;
   storeName: string;
   storeAddress: string;
   validityPeriod: Date;

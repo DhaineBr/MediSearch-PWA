@@ -6,7 +6,7 @@
     <div class="mid-container">
       <ng-container *ngFor="let reservation of reservations">
         <div class="reserved-meds" routerLink="/home/reservation-detail">
-            <span class="cell-header">{{reservation.orderID}}</span> <br>
+            <span class="cell-header">{{reservation.id}}</span> <br>
             <span class="store-details">{{reservation.storeName}}<br/>
               {{reservation.storeAddress}} <br/></span>
             <label for="time-to-live">Transaction Date:</label>
