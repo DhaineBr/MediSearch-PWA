@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CustomersService } from 'src/app/services/customers.service';
 
 interface Reservation {
-  id: string;
+  orderID: string;
   storeName: string;
   storeAddress: string;
   validityPeriod: Date;
@@ -19,31 +19,31 @@ export class ReservationComponent implements OnInit {
     private _customers : CustomersService
   ) {}
   ngOnInit(): void {
-    this.getordersbyID(6)
+    this.generateDummyData(10)
   }
   ordersinfo: any
-  getordersbyID(id:number) {
-    this._customers.gettransactions(id).subscribe((response) => {
-      this.ordersinfo = response;
-      console.log(this.ordersinfo)
-    })
-  }
-  // generateDummyData(count: number): Reservation[] {
-  //   const dummyReservation: Reservation[] = [];
-
-  //   for (let i = 1; i <= count; i++) {
-  //     const validityPeriod = new Date('2023-10-24');
-  //     validityPeriod.setDate(validityPeriod.getDate() + i);
-
-  //     const reservation: Reservation = {
-  //       orderID: `932105321${i}`,
-  //       storeName: `Pharmacy ${i}`,
-  //       storeAddress: `Brgy. ${i}`,
-  //       validityPeriod: validityPeriod,
-  //     };
-
-  //     dummyReservation.push(reservation);
-  //   }
-  //   return dummyReservation;
+  // getordersbyID(id:number) {
+  //   this._customers.gettransactions(id).subscribe((response) => {
+  //     this.ordersinfo = response;
+  //     console.log(this.ordersinfo)
+  //   })
   // }
+  generateDummyData(count: number): Reservation[] {
+    const dummyReservation: Reservation[] = [];
+
+    for (let i = 1; i <= count; i++) {
+      const validityPeriod = new Date('2023-10-24');
+      validityPeriod.setDate(validityPeriod.getDate() + i);
+
+      const reservation: Reservation = {
+        orderID: `932105321${i}`,
+        storeName: `TGP ${i}`,
+        storeAddress: `Brgy. ${i}`,
+        validityPeriod: validityPeriod,
+      };
+
+      dummyReservation.push(reservation);
+    }
+    return dummyReservation;
+  }
 }

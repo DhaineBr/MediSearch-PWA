@@ -8,5 +8,7 @@ import { Router } from '@angular/router';
 
 })
 export class AccountComponent {
-
+  resetMapPopupState() {
+    localStorage.removeItem('mapPopupShown');
+  }
 }

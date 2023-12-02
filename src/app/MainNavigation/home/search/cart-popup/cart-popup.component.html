@@ -1,0 +1,22 @@
+<h4>Add to Cart</h4>
+
+<mat-dialog-content>
+  <p>Stock: <span>2</span></p>
+  <div class="quantity">
+    <label for="quantity">Quantity</label><br>
+    <div class="inputs">
+      <button class="decrement"><i class="fa-solid fa-minus"></i></button>
+      <input type="number" id="quantity" autofocus>
+      <button class="increment"><i class="fa-solid fa-plus"></i></button>
+    </div>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button class="cancel" (click)="closeDialog()">
+    Cancel
+  </button>
+  <button class="confirm">
+    Confirm
+  </button>
+</mat-dialog-actions>

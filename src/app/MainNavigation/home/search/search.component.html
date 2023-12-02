@@ -13,21 +13,24 @@
   <div class="content">
 
       <div class="all-pharmacies">
-        <ng-container *ngFor="let  pharmacy of pharmacyList">
-          <div class="store">
+        <!-- <ng-container *ngFor="let  pharmacy of pharmacyList"> -->
+          <div class="medicine">
             <div class="left">
-              Profile Pic
-            </div>
-            <div class="right">
-              <div class="store-detail-container" routerLink="/home/pharmacy">
-                  <span class="store-name">{{pharmacy.pharmacyName}}</span><br>
-                  <span class="store-details">{{pharmacy.pharmacyAddress}}<br>
-                    {{pharmacy.storeHours}}</span> <br>
-                  <i class="fa-solid fa-star-half-stroke" id="star-icon"></i><span class="rating">&nbsp; {{pharmacy.rating}}</span>
+              <div class="medicine-name">
+                Biogesic
+              </div>
+              <div class="store-name">
+                The Generics Pharmacy
+              </div>
+              <div class="address">
+                Brgy. 2, Poblacion, Batangas City
               </div>
             </div>
+            <div class="right">
+              <button class="add-to-cart" (click)="addToCart()"><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
           </div>
-        </ng-container>
+        <!-- </ng-container> -->
       </div>
 
     </div>

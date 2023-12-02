@@ -4,15 +4,16 @@
       <button routerLink="/home/history"><i class="fa-solid fa-clock-rotate-left"></i></button>
     </div>
     <div class="mid-container">
-      <ng-container *ngFor="let reservation of reservations">
+
         <div class="reserved-meds" routerLink="/home/reservation-detail">
-            <span class="cell-header">{{reservation.id}}</span> <br>
+          <ng-container *ngFor="let reservation of reservations">
+            <span class="cell-header">{{reservation.orderID}}</span> <br>
             <span class="store-details">{{reservation.storeName}}<br/>
               {{reservation.storeAddress}} <br/></span>
             <label for="time-to-live">Transaction Date:</label>
             <span class="time-to-live"> {{reservation.validityPeriod | date }}</span>
+          </ng-container>
         </div>
-      </ng-container>
 
 
     </div>

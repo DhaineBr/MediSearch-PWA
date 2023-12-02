@@ -69,6 +69,13 @@ i   {
   box-shadow: #ddf0eb 0 0 0.5rem 0.2rem;
 }
 
+.add-to-cart  {
+  color: white;
+  background-color: transparent;
+  color: green;
+}
+
+
 
 
 //Middle div
@@ -80,11 +87,7 @@ i   {
   position: relative;
 }
 
-h3  {
-  font-family: Idealist Sans;
-  padding: 0 0 0 2.5%;
-  color: #55665e;
-}
+
 
 .pharmacies {
   display: flex;
@@ -98,100 +101,8 @@ h3  {
   width: 100%;
 }
 
-.pharmacy-card  {
-  min-height: 25vh;
-  max-height: 30vh;
-  margin: 0 5% 0 0;
-  width: 100%;
-  border-radius: 0.25rem;
-  padding: 2.5%;
-  background-color: white;
-  box-shadow: #ddf0eb 0rem 0.0625rem 0rem, #ddf0eb 0rem 0rem 0.5rem;
-}
-
-.top {
-  width: 100%;
-  height: 12.5vh;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  display: flex;
-}
-
-.bottom  {
-  width: 100%;
-  height: 10vh;
-}
-
-.pharmacy-details  {
-  font-size: 2.75vw;
-}
-
-.rating {
-  opacity: 0.5;
-  font-weight: 200;
-  font-size: 2.75vw;
-}
-
-#star-icon  {
-  color: rgb(255, 183, 0);
-  font-size: 3.75vw;
-}
-
-.pharmacy-details, .pharmacy-name  {
-  color: #55665e;
-}
-
-.pharmacy-name  {
-  font-size: 3.5vw;
-}
 
 
-//bottom container div
-.bottom-container {
-  min-height: 200vh;
-  max-height: 220vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-.sort-nav {
-  width: 100%;
-  padding: 2%;
-  color: #55665e;
-  text-align: right;
-  height: 5vh;
-  position: sticky;
-  z-index: 99;
-}
-
-.select-form  {
-  width: 35%;
-  float: right;
-  margin: 0 5% 0 0
-}
-
-select  {
-  border-radius: 0.25rem;
-  font-size: 3vw;
-  opacity: 0.5;
-  box-shadow: #50b299 0 0 0.25rem 0.02rem;
-}
-
-label {
-  font-size: 4vw;
-}
-
-option  {
-  font-size: 3vw;
-  outline: none;
-  border-radius: 1rem;
-  background-color: white;
-  color: #55665e;
-}
 
 .all-pharmacies {
   overflow-x: hidden;
@@ -199,12 +110,12 @@ option  {
   padding: 2.5% 0 10% 0
 }
 
-.store    {
+.medicine    {
   width: 95%;
   margin: auto;
   margin-bottom: 5%;
-  min-height: 15vh;
-  max-height: 20vh;
+  min-height: 7.5vh;
+  max-height: 15vh;
   overflow: hidden;
   border-radius: 0.75rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.2rem 0.4rem -0.05rem, rgba(0, 0, 0, 0.06) 0rem 0.1rem 0.4rem -0.05rem;
@@ -215,20 +126,44 @@ option  {
 
 }
 
+.medicine-name, .address, .store-name {
+  width: 90%;
+  height: 2.5vh;
+  text-align: left;
+  color: #55665e;
+}
+
+.medicine-name  {
+  font-weight: 600;
+  font-size: 5vw;
+}
+
+.address  {
+  font-weight: 100;
+  font-size: 2vw;
+}
+
+.store-name  {
+  font-weight: 500;
+  font-size: 3.5vw;
+}
+
+
 .left {
   float: left;
-  width: 20%;
+  width: 80%;
   justify-content: center;
   align-items: center;
   height: 12.5vh;
   text-align: center;
   display: flex;
+  flex-direction: column;
   margin: auto;
 }
 
 .right  {
   float: right;
-  width: 70%;
+  width: 15%;
   height: 15vh;
   justify-content: center;
   align-items: center;
@@ -236,35 +171,7 @@ option  {
   margin: auto;
 }
 
-.store-detail-container {
-  width: 100%;
-  height: 90%;
-}
 
-.store-details, .store-name  {
-  color: #55665e;
-}
-
-.store-name  {
-  font-size: 4.5vw;
-  font-weight: 700;
-}
-
-
-.floating-button {
-  position: fixed;
-  bottom: 15%;
-  right: 5%;
-  z-index: 1000;
-}
-
-
-@media (max-width: 768px) {
-.floating-button {
-  bottom: 12%;
-  right: 2%;
-}
-}
 
 .location {
   color: #55665e;
